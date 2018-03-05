@@ -1,5 +1,6 @@
 ---
 - name: pip | Install pip packages
+  pip:
     name: "{{ item }}"
     executable: "{{ django_pip_executable }}"
     state: latest
