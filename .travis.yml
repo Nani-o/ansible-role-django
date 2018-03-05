@@ -13,7 +13,6 @@ env:
   - lxd_container_alias: ubuntu/14.04/amd64
   - lxd_container_alias: debian/9/amd64
   - lxd_container_alias: debian/8/amd64
-  - lxd_container_alias: debian/7/amd64
 
 install:
   # Cloning testing template

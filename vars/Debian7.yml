@@ -1,5 +1,0 @@
----
-django_pip_executable: pip-3.2
-django_python3_packages:
-  - python3
-  - python3-pip

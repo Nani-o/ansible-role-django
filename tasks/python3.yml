@@ -15,6 +15,6 @@
 
 - name: python3 | Install pip via setuptools for CentOS 6
   command: python3 /usr/lib/python3.4/site-packages/easy_install.py --upgrade pip
-  changed_when: "'is already the active version' in easy_install_result.stdout"
+  changed_when: "'is already the active version' not in easy_install_result.stdout"
   register: easy_install_result
   when: "ansible_os_family + ansible_distribution_major_version == 'RedHat6'"
