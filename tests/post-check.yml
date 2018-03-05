@@ -1,0 +1,8 @@
+---
+- hosts: container
+  vars_files:
+    - "vars/main.yml"
+  tasks:       
+    - name: Check that Django is installed correctly
+      command: "python3 -c 'import django;print(django.VERSION)'"
+

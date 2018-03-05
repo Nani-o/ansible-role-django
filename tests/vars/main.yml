@@ -1,0 +1,6 @@
+---
+django_projects:
+  - user: app1
+    path: /data/app1
+  - user: app2
+    path: /data/app2

@@ -1,0 +1,4 @@
+---
+django_pip_executable: pip3
+django_pip_packages:
+  - django

@@ -1,0 +1,5 @@
+---
+- include_vars: "{{ ansible_os_family }}.yml"
+- include_tasks: "common.yml"
+- include_tasks: "python3.yml"
+- include_tasks: "pip.yml"

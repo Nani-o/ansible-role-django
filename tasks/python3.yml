@@ -1,0 +1,14 @@
+---
+- name: Install epel release
+  yum_repository:
+    name: epel
+    description: EPEL YUM repo
+    baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
+    gpgkey: https://download.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
+  when: "ansible_os_family == 'RedHat'"
+
+- name: Install python3
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ django_python3_packages }}"
