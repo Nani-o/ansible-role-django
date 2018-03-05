@@ -1,12 +1,12 @@
 ---
-- name: 
-  user: Create projects users and home
+- name: common | Create projects users and home 
+  user:
     name: "{{ item.user }}"
     home: "{{ item.root }}"
     state: present
   with_items: "{{ django_projects }}"
 
-- name: Make sure permissions are correct
+- name: common | Make sure permissions are correct
   file:
     path: "{{ item.root }}"
     owner: "{{ item.user }}"
