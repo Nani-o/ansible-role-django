@@ -7,8 +7,15 @@
     gpgkey: https://download.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
   when: "ansible_os_family == 'RedHat'"
 
-- name: python3 | Install python 3
+- name: python3 | Install python 3 and pip
   package:
     name: "{{ item }}"
     state: latest
   with_items: "{{ django_python3_packages }}"
+
+- name: python3 | Install pip via setuptools for CentOS 6
+  easy_install:
+    name: pip
+    state: latest
+    executable: /usr/lib/python3.4/site-packages/easy_install.py
+
